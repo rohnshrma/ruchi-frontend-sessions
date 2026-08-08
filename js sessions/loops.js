@@ -220,3 +220,24 @@ console.log(numCount);
 // - If the guess is less than target, alert "too low" and loop again.
 // - If the guess is greater than target, alert "too high" and loop
 //   again.
+
+var secret = Math.floor(Math.random() * 100) + 1;
+
+var max = 10;
+
+var attempts = 0;
+
+while (attempts < max) {
+  attempts += 1;
+
+  var guess = parseInt(prompt("Enter guess : "));
+
+  if (guess < secret) {
+    alert("Too Low! Try High");
+  } else if (guess > secret) {
+    alert("Too High! Try Low");
+  } else {
+    alert("You've Guessed the correct number " + guess);
+    break;
+  }
+}
