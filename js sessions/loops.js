@@ -142,3 +142,81 @@ console.log(numCount);
 
 // 31. Check whether a number is a perfect number using a for loop
 // (sum of its factors, excluding itself, equals the number).
+
+// while loop
+
+// fixed iteration
+
+// var i = 100;
+
+// while (i >= 1) {
+//   i -= 1;
+//   console.log("i");
+// }
+
+// var email = prompt("Enter email : ");
+
+// while (!email.includes("@") || !email.endsWith(".com") || email.length < 8) {
+//   email = prompt("Enter email : ");
+// }
+
+// while (true) {
+//   var email = prompt("Enter email : ");
+
+//   if (email.includes("@") && email.endsWith(".com") && email.length >= 8) {
+//     alert("correct");
+//     break;
+//   }
+// }
+
+// ==========================================================
+// PRACTICE TASKS — WHILE LOOP
+// Solve each one using a while loop only (no for loop).
+// ==========================================================
+
+// ---- FIXED ITERATION (count is known before the loop starts) ----
+
+// 1. Print numbers from 1 to 20 using a while loop.
+
+// 2. Print numbers from 20 down to 1 using a while loop.
+
+// 3. Print the multiplication table (1 to 10) of a given number using
+// a while loop.
+
+// 4. Find the factorial of a number using a while loop.
+
+// 5. Find the sum of the first N natural numbers using a while loop.
+
+// 6. Print all even numbers between 1 and 50 using a while loop.
+
+// 7. Given a word, print each character one by one using a while loop
+// (loop from index 0 to word.length - 1).
+
+// 8. Count the number of vowels in a string using a while loop.
+
+// ---- NON-FIXED ITERATION (loop keeps running until a condition met,
+// count is NOT known in advance — e.g. validating input, user retries) ----
+
+// 9. Keep asking the user (prompt) to enter a number greater than 0
+// using a while loop, until they actually enter one.
+
+// 10. Keep asking the user to enter a password using a while loop,
+// until the password entered is at least 6 characters long.
+
+// 11. Starting from a given number, keep dividing it by 2 (using a
+// while loop) until it becomes less than 1, and count how many steps
+// it took.
+
+// 12. Keep adding random numbers (Math.random()) using a while loop
+// until their total sum crosses 100, and print how many numbers were
+// added.
+
+// 13. Number guessing game:
+// - Pick a fixed target number, e.g. var target = 7;
+// - Use a while loop (with true, and break) since we don't know how
+//   many guesses the user will need — this is non-fixed iteration.
+// - Inside the loop, prompt the user to guess a number.
+// - If the guess equals target, alert "correct" and break.
+// - If the guess is less than target, alert "too low" and loop again.
+// - If the guess is greater than target, alert "too high" and loop
+//   again.
