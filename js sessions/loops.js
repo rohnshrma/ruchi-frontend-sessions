@@ -241,3 +241,79 @@ while (attempts < max) {
     break;
   }
 }
+
+// ==========================================================
+// PRACTICE TASKS — HANGMAN GAME (using loops)
+// Build this step by step. Tasks only, no solutions.
+// Use while/for loops + prompt/alert (or console.log) like above.
+// ==========================================================
+
+// 1. Create a list (array) of words, e.g. ["javascript", "hangman",
+// "developer", "computer"], and randomly pick one word from it as the
+// secretWord (hint: Math.random() + Math.floor, like the guessing
+// game above).
+
+// 2. Set a maxAttempts variable (e.g. 6) and a wrongGuesses counter
+// starting at 0.
+
+// 3. Create a "guessedLetters" array (empty at the start) to keep
+// track of every letter the player has already guessed.
+
+// 4. Create a "display" array that represents the word on screen —
+// same length as secretWord, filled with "_" for every letter (use a
+// for loop to build it, don't hardcode the underscores).
+
+// 5. Write a function (or inline loop) that prints/joins the display
+// array into a string like "_ _ n g _ a n" so the player can see
+// current progress.
+
+// 6. Use a while loop (non-fixed iteration, similar to the number
+// guessing game) that keeps running until either:
+//    - the player has revealed the whole word, OR
+//    - wrongGuesses reaches maxAttempts
+
+// 7. Inside the loop, prompt the player to guess a single letter.
+
+// 8. Validate the guess using a loop or condition: reject inputs that
+// are empty, more than one character, or not a letter — ask again
+// until valid (similar style to the email validation while loop
+// above).
+
+// 9. Check if the guessed letter is already in guessedLetters (use a
+// for loop to search the array). If yes, alert "Already guessed that
+// letter" and skip to the next loop iteration (continue).
+
+// 10. If the letter is new, push it into guessedLetters.
+
+// 11. Use a for loop to check if the guessed letter exists anywhere
+// in secretWord. If it exists, loop through secretWord and update
+// every matching position in the display array with that letter
+// (don't just replace the first match — handle repeated letters).
+
+// 12. If the guessed letter does NOT exist in secretWord, increment
+// wrongGuesses by 1, and alert how many attempts are left
+// (maxAttempts - wrongGuesses).
+
+// 13. After each guess, print the current display progress (reuse
+// task 5's logic) so the player can track the word so far.
+
+// 14. After each guess, check (using a loop, e.g. .includes() is not
+// allowed — compare display array against secretWord character by
+// character) whether the display array no longer contains any "_".
+// If true, this means the player has won — break out of the loop and
+// alert "You win! The word was " + secretWord.
+
+// 15. If wrongGuesses reaches maxAttempts, break out of the loop and
+// alert "You lose! The word was " + secretWord.
+
+// 16. (Stretch) Keep a "wrong guesses" array too (separate from
+// guessedLetters) and print it alongside the display so the player
+// can see which letters they've already gotten wrong.
+
+// 17. (Stretch) Draw a simple text-based hangman stage using a for
+// loop or a switch/if-else based on wrongGuesses count (e.g. print
+// more parts of a stick figure as wrongGuesses increases).
+
+// 18. (Stretch) After the game ends (win or lose), ask the player
+// (prompt) if they want to play again; if yes, reset all counters
+// and arrays and restart the whole game loop from task 6.
