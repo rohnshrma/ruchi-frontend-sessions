@@ -276,3 +276,16 @@ if (age > 18) console.log("Adult");
 // Given age and smoker (boolean): base premium is 5000.
 // Add 2000 if age > 40. Add 3000 if smoker is true.
 // Print the final calculated premium.
+
+var good_salary = true;
+var good_credit_score = true;
+
+if (good_credit_score) {
+  if (good_salary) {
+    console.log("Loan approved");
+  } else {
+    console.log("Insufficient Salary");
+  }
+} else {
+  console.log("Ineligible");
+}
