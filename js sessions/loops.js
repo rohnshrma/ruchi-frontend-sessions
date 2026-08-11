@@ -221,26 +221,26 @@ console.log(numCount);
 // - If the guess is greater than target, alert "too high" and loop
 //   again.
 
-var secret = Math.floor(Math.random() * 100) + 1;
+// var secret = Math.floor(Math.random() * 100) + 1;
 
-var max = 10;
+// var max = 10;
 
-var attempts = 0;
+// var attempts = 0;
 
-while (attempts < max) {
-  attempts += 1;
+// while (attempts < max) {
+//   attempts += 1;
 
-  var guess = parseInt(prompt("Enter guess : "));
+//   var guess = parseInt(prompt("Enter guess : "));
 
-  if (guess < secret) {
-    alert("Too Low! Try High");
-  } else if (guess > secret) {
-    alert("Too High! Try Low");
-  } else {
-    alert("You've Guessed the correct number " + guess);
-    break;
-  }
-}
+//   if (guess < secret) {
+//     alert("Too Low! Try High");
+//   } else if (guess > secret) {
+//     alert("Too High! Try Low");
+//   } else {
+//     alert("You've Guessed the correct number " + guess);
+//     break;
+//   }
+// }
 
 // ==========================================================
 // PRACTICE TASKS — HANGMAN GAME (using loops)
@@ -317,3 +317,55 @@ while (attempts < max) {
 // 18. (Stretch) After the game ends (win or lose), ask the player
 // (prompt) if they want to play again; if yes, reset all counters
 // and arrays and restart the whole game loop from task 6.
+
+// for (var i = 1; i <= 5; i++) {
+//   var row = "";
+//   for (var j = 1; j <= i; j++) {
+//     row += i;
+//   }
+//   console.log(row);
+// }
+
+let words = ["apple", "banana", "orange", "pineapple"];
+let word = words[Math.floor(Math.random() * 3) + 1];
+let maxGuess = 6;
+let wrongGuess = 0;
+
+let guessedLetters = []; // tried letters both correct/incorrect
+
+let display = [];
+
+for (let i = 0; i <= word.length; i++) {
+  display.push("_");
+}
+
+while (wrongGuess < maxGuess || display.includes("_")) {
+  alert(`Word : ${display.join(" ")}\n
+        Guessed Letters : ${guessedLetters.join(", ")}\n
+        Attempts Remaining : ${maxGuess - wrongGuess}`);
+
+  let guess = prompt("Guess any alphabet: ").toLowerCase();
+
+  if (guess.length != 1) {
+    continue;
+  }
+
+  if (guessedLetters.includes(guess)) {
+    continue;
+  }
+
+  guessedLetters.push(guess);
+
+  if (word.includes(guess)) {
+    for (var i = 0; i < word.length; i += 1) {
+      if (word[i] === guess) {
+        display[i] = guess;
+      }
+    }
+    alert("Right Guess");
+    alert(`Word : ${display.join(" ")}`);
+  } else {
+    wrongGuess += 1;
+    alert("Wrong Guess : -1");
+  }
+}
