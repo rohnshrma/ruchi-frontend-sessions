@@ -1,16 +1,16 @@
-// var car = {
-//   model: "i10",
-//   brand: "Hyundai",
-//   year: 2020,
-//   isAvailable: false,
-//   colors: ["red", "grey"],
-//   //   start: () => {
-//   //     console.log("Engine started", this);
-//   //   },
-//   start: function () {
-//     console.log("Engine started", this);
-//   },
-// };
+var car = {
+  model: "i10",
+  brand: "Hyundai",
+  year: 2020,
+  isAvailable: false,
+  colors: ["red", "grey"],
+  //   start: () => {
+  //     console.log("Engine started", this);
+  //   },
+  start: function () {
+    console.log("Engine started", this);
+  },
+};
 
 // console.log(car);
 // console.log(car.isAvailable);
@@ -108,3 +108,31 @@ class Student {
 var r = new Student("Ruchi", 23, "Female", "12th");
 
 r.printInfo();
+
+var marks = [23, 4, 3, 546, 4, 3, 44, 5, 3, 2];
+
+var car = {
+  model: "i10",
+  brand: "Hyundai",
+  year: 2020,
+  isAvailable: false,
+  colors: ["red", "grey"],
+  start: function () {
+    console.log("Engine started", this);
+  },
+};
+
+for (var i in marks) {
+  console.log(marks[i]);
+}
+
+for (var key in car) {
+  console.log(car[key]);
+}
+
+for (const i of marks) {
+  console.log(i);
+}
+for (const i of "marks") {
+  console.log(i);
+}
